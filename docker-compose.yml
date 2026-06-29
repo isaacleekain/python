@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    container_name: eiv_docker_template_app
+    working_dir: /workspace
+    volumes:
+      - .:/workspace
+    command: sleep infinity
