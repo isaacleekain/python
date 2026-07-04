@@ -1,8 +1,16 @@
 services:
   app:
-    build: .
+    build:
+      context: .
+      dockerfile: .devcontainer/Dockerfile
     container_name: eiv_docker_template_app
     working_dir: /workspace
+    environment:
+      UV_CACHE_DIR: /home/vscode/.cache/uv
     volumes:
       - .:/workspace
+      - uv-cache:/home/vscode/.cache/uv
     command: sleep infinity
+
+volumes:
+  uv-cache:

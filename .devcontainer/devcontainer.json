@@ -6,8 +6,13 @@
   },
   "workspaceFolder": "/workspace",
   "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-  "overrideCommand": true,
   "remoteUser": "vscode",
+  "mounts": [
+    "source=uv-cache,target=/home/vscode/.cache/uv,type=volume"
+  ],
+  "containerEnv": {
+    "UV_CACHE_DIR": "/home/vscode/.cache/uv"
+  },
   "customizations": {
     "vscode": {
       "extensions": [
@@ -19,9 +24,10 @@
       "settings": {
         "python.defaultInterpreterPath": "/workspace/.venv/bin/python",
         "python.terminal.activateEnvironment": true,
-        "terminal.integrated.defaultProfile.linux": "bash"
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "terminal.integrated.cwd": "/workspace"
       }
     }
   },
-  "postCreateCommand": "bash .devcontainer/post-create.sh"
+  "postCreateCommand": "uv sync"
 }
