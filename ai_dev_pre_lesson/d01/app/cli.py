@@ -2,25 +2,11 @@ import os
 import sys
 import json
 import uuid
-from datetime import datetime, timedelta, timezone
-from src.configs.config import WORKSPACE_ROOT
-from src.bin.db import init_db
+from datetime import datetime
+from setting import WORKSPACE_ROOT, JSON_PATH, JSON_INITIAL_DATA, UTC_PLUS_8
 
 
-ACCOUNT = ["Cash", "Credit Card"]
-CATEGORY = ["Food", "Transportation", "Entertainment", "Utilities", "Other"]
-UTC_PLUS_8 = timezone(timedelta(hours=8))
-UTC_PLUS_9 = timezone(timedelta(hours=9))
-VALIDATION_USER = {
-    "isaacleekain": {
-        "password": "password1", 
-        "role": "admin"
-    },
-    "dianbo": {
-        "password": "password2", 
-        "role": "user"
-    }
-}
+
 
 
 def user_validation(user_input):
@@ -205,30 +191,30 @@ def show_all_transactions(json_path):
             
             
 def main():
-    init_db()
+    for json_file in list(JSON_INITIAL_DATA.keys()):
+        if not os.path.exists(JSON_PATH[json_file]):
+            print(f"Not Found {json_file}.json at {JSON_PATH[json_file]}")
+            with open(JSON_PATH[json_file], "w") as f:
+                json.dump(JSON_INITIAL_DATA[json_file], f, indent=4)
+                print(f"Created {json_file}.json at {JSON_PATH[json_file]}")
     user_input = input("Enter your username: ")
     user = user_validation(user_input)
     password_input = input("Enter your password: ")
     password_validation(user, password_input)
-    json_path = WORKSPACE_ROOT / "ai_dev_pre_lesson/d01/data/input/data.json"
-    if not os.path.exists(json_path):
-        print(f"Found data.json at {json_path}")
-        with open(json_path, "w") as f:
-            json.dump([], f, indent=4)
     while True:
         method = input("Enter method (add, del, search, rank, statis, show): ")
         if method == "add":
-            add_transaction(json_path, user)
+            add_transaction(transactions_json_path, user)
         elif method == "del":
-            delete_transaction(json_path)
+            delete_transaction(transactions_json_path)
         elif method == "search":
-            search_transaction(json_path)
+            search_transaction(transactions_json_path)
         elif method == "rank":
-            show_ranking(json_path)
+            show_ranking(transactions_json_path)
         elif method == "statis":    
-            show_statistics(json_path)
+            show_statistics(transactions_json_path)
         elif method == "show":
-            show_all_transactions(json_path)
+            show_all_transactions(transactions_json_path)
         elif method == "exit":
             sys.exit()
     
