@@ -1,25 +1,22 @@
 {
-  "name": "eiv-docker-template",
-  "build": {
-    "dockerfile": "Dockerfile",
-    "context": ".."
-  },
-  "workspaceFolder": "/workspace",
-  "workspaceMount": "source=${localWorkspaceFolder},target=/workspace,type=bind",
-  "remoteUser": "vscode",
-  "mounts": [
-    "source=uv-cache,target=/home/vscode/.cache/uv,type=volume"
+  "name": "github-personal-docker-python",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "app",
+  "runServices": [
+    "app",
+    "postgres"
   ],
-  "containerEnv": {
-    "UV_CACHE_DIR": "/home/vscode/.cache/uv"
-  },
+  "workspaceFolder": "/workspace",
+  "remoteUser": "vscode",
   "customizations": {
     "vscode": {
       "extensions": [
         "ms-python.python",
         "ms-python.vscode-pylance",
         "charliermarsh.ruff",
-        "openai.chatgpt"
+        "openai.chatgpt",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-pg"
       ],
       "settings": {
         "python.defaultInterpreterPath": "/workspace/.venv/bin/python",

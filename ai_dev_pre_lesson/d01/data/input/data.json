@@ -1,6 +1,20 @@
 [
     {
-        "name": "Tom",
-        "score": 100
+        "id": "0e0da970-f6f8-419c-bde7-9b80e2560835",
+        "date": "2026-07-06",
+        "time": "13:27:36",
+        "expense_amount": 123.0,
+        "payment_account": "Cash",
+        "expense_category": "Food",
+        "note": ""
+    },
+    {
+        "id": "f361c8d3-113e-4d48-b833-e1fbd8376192",
+        "date": "2026-07-06",
+        "time": "13:52:39",
+        "expense_amount": 22.0,
+        "payment_account": "Cash",
+        "expense_category": "Food",
+        "note": ""
     }
 ]
