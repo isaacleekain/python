@@ -19,35 +19,62 @@ JSON_PATH = {
     "account": WORKSPACE_ROOT / "ai_dev_pre_lesson/d01/data/account.json",
     "category": WORKSPACE_ROOT / "ai_dev_pre_lesson/d01/data/category.json",
     "transaction": WORKSPACE_ROOT / "ai_dev_pre_lesson/d01/data/transaction.json",
+    "account_type": WORKSPACE_ROOT / "ai_dev_pre_lesson/d01/data/account_type.json",
 }
 JSON_INITIAL_DATA = {
     "user":[
         {
-            "id": "c31d22c5-bbb8-42f5-aa1e-66fb096c93b7",
+            "id": "019f3af6-2a54-78b1-9fda-96b19db927ab",
             "username": "admin",
             "password": "admin",
-            "role": "admin",
+            "role": 0,
             "created_at": "2026-07-07 00:00:00",
             "updated_at": "2026-07-07 00:00:00",
-            "created_by": "system",
-            "updated_by": "system",
-            "deleted": False
+            "created_by": "default",
+            "updated_by": "default",
+            "is_deleted": False
         }
     ],
     "account":[
         {
-            "id": "0ce63620-8dd7-445c-9c80-1df6bb3f2d21",
-            "user_id": "c31d22c5-bbb8-42f5-aa1e-66fb096c93b7",
-            "name": "Cash",
-            "type": "cash",
+            "id": "019f3af6-72cc-7768-b53c-ad2538f4e0b6",
+            "user_id": "019f3af6-2a54-78b1-9fda-96b19db927ab",
+            "account_type_id": "019f3b60-6f1b-73cb-a147-c2462c9d7749",
+            "name": "人民币",
             "balance": 0,
             "created_at": "2026-07-07 00:00:00",
             "updated_at": "2026-07-07 00:00:00",
-            "created_by": "system",
-            "updated_by": "system",
-            "deleted": False
+            "created_by": "default",
+            "updated_by": "default",
+            "is_deleted": False,
+            "is_default": True
         }
     ],
-    "category":[],
-    "transaction":[]
+    "category":[
+        {
+            "id": "019f3af6-c9c0-72b5-b422-55ced6043cdf",
+            "user_id": "019f3af6-2a54-78b1-9fda-96b19db927ab",
+            "name": "饮食",
+            "type": "支出",
+            "created_at": "2026-07-07 00:00:00",
+            "updated_at": "2026-07-07 00:00:00",
+            "created_by": "default",
+            "updated_by": "default",
+            "is_deleted": False,
+            "is_default": True
+        }
+    ],
+    "transaction":[],
+    
+    "account_type": [
+        {
+            "id": "019f3b60-6f1b-73cb-a147-c2462c9d7749",
+            "name": "现金",
+            "created_at": "2026-07-07 00:00:00",
+            "updated_at": "2026-07-07 00:00:00",
+            "created_by": "default",
+            "updated_by": "default",
+            "is_deleted": False
+        }
+    ]
 }

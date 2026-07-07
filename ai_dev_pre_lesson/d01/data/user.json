@@ -1,0 +1,24 @@
+[
+    {
+        "id": "019f3af6-2a54-78b1-9fda-96b19db927ab",
+        "username": "admin",
+        "password": "admin",
+        "role": 0,
+        "created_at": "2026-07-07 00:00:00",
+        "updated_at": "2026-07-07 00:00:00",
+        "created_by": "system",
+        "updated_by": "system",
+        "is_deleted": false
+    },
+    {
+        "id": "019f3b2a-0d66-7c69-95a2-a31fc57fb4b7",
+        "username": "isaac",
+        "password": "qwer1234",
+        "role": 0,
+        "created_at": "2026-07-07 00:00:00",
+        "updated_at": "2026-07-07 00:00:00",
+        "created_by": "system",
+        "updated_by": "system",
+        "is_deleted": false
+    }
+]

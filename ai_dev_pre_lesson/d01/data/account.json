@@ -1,0 +1,15 @@
+[
+    {
+        "id": "019f3af6-72cc-7768-b53c-ad2538f4e0b6",
+        "user_id": "019f3af6-2a54-78b1-9fda-96b19db927ab",
+        "name": "\u4eba\u6c11\u5e01",
+        "type": "\u73b0\u91d1",
+        "balance": 0,
+        "created_at": "2026-07-07 00:00:00",
+        "updated_at": "2026-07-07 00:00:00",
+        "created_by": "admin",
+        "updated_by": "admin",
+        "is_deleted": false,
+        "is_default": true
+    }
+]
