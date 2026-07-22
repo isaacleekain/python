@@ -1,0 +1,37 @@
+format:
+  user:
+    user_name:
+      required: true
+      digits: [4, 20]
+    password:
+      required: true
+      digits: [8, 20]
+    role:
+      required: true
+      range: 
+        select: ["1", "2", "3"]
+  category:
+    category_name:
+      required: true
+      digits: [1, 20]
+    category_type:
+      required: true
+      range:
+        select: ["0", "1", "2"]
+  account:
+    account_name:
+      required: true
+      digits: [1, 20]
+  account_type:
+    account_type_name:
+      required: true
+      digits: [1, 20]
+  transaction:
+    amount:
+      required: true
+      range:
+        min: 0
+    transaction_type:
+      required: true
+      range:
+        select: ["0", "1"]

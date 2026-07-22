@@ -8,6 +8,10 @@ RUN apt-get update && apt-get install -y \
     git curl ca-certificates build-essential sudo \
     && rm -rf /var/lib/apt/lists/*
 
+RUN apt-get update \
+    && apt-get install -y --no-install-recommends python3-tk \
+    && rm -rf /var/lib/apt/lists/*
+
 RUN groupadd --gid ${USER_GID} ${USERNAME} \
     && useradd --uid ${USER_UID} --gid ${USER_GID} -m ${USERNAME} \
     && echo ${USERNAME} ALL=\(root\) NOPASSWD:ALL > /etc/sudoers.d/${USERNAME} \
