@@ -10,7 +10,9 @@ RUN apt-get update && apt-get install -y \
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends python3-tk \
+    && apt-get install -y fonts-noto-cjk \
     && rm -rf /var/lib/apt/lists/*
+
 
 RUN groupadd --gid ${USER_GID} ${USERNAME} \
     && useradd --uid ${USER_UID} --gid ${USER_GID} -m ${USERNAME} \

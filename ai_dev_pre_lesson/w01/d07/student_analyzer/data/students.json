@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Tom",
+    "score": 88,
+    "email": "tom@example.com"
+  },
+  {
+    "name": "Lucy",
+    "score": 95,
+    "email": "lucy@example.com"
+  },
+  {
+    "name": "Lucy2",
+    "score": 96,
+    "email": "lucy@example.com"
+  },
+  {
+    "name": "Jack",
+    "score": 58,
+    "email": "jack@example.com"
+  }
+]

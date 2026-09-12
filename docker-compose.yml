@@ -3,7 +3,6 @@ services:
     build:
       context: .
       dockerfile: .devcontainer/Dockerfile
-    container_name: eiv_docker_template_app
     working_dir: /workspace
     environment:
       UV_CACHE_DIR: /home/vscode/.cache/uv

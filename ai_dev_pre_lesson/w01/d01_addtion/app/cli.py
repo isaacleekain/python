@@ -4,7 +4,7 @@ import json
 import uuid6
 import yaml
 from datetime import datetime
-from app.setting import WORKSPACE_ROOT, JSON_PATH, JSON_INITIAL_DATA, UTC_PLUS_8
+from ai_dev_pre_lesson.w01.d01_addtion.app.setting import WORKSPACE_ROOT, JSON_PATH, JSON_INITIAL_DATA, UTC_PLUS_8
 
 
 def yaml_load(path):

@@ -1,0 +1,5 @@
+name,score,bonus,final_score,passed
+Tom,80,5,85,True
+Lucy,91,3,94,True
+Jack,55,10,65,True
+Bob,70,8,78,True
